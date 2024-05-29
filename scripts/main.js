@@ -27,7 +27,7 @@ document.querySelector('.tab__leader').addEventListener('click', () => {
     profileSection.style.display = 'none'
     referalsSection.style.display = 'none'
 
-    fetch(`http://77.221.154.46/leaderboard`)
+    fetch(`http://77.221.154.46:80/leaderboard`)
         .then((response) => {
             return response.json();
         }).then((result) => {
@@ -63,7 +63,7 @@ document.querySelector('.copy__btn').addEventListener("click", function () {
 });*/
 
 function submitSmth() {
-    var url = "http://77.221.154.46/api2?data=" + encodeURIComponent(JSON.stringify({"name": "set_profile", "uid": tg.initDataUnsafe.user.id, "xname": xname_input.value, "tonWallet" : tonWallet_input.value}));
+    var url = "http://77.221.154.46:80/api2?data=" + encodeURIComponent(JSON.stringify({"name": "set_profile", "uid": "1354882996", "xname": xname_input.value, "tonWallet" : tonWallet_input.value}));
 
     fetch(url, {method: 'GET'})
 }
@@ -72,14 +72,14 @@ function submitRefcode() {
     event.preventDefault()
     let enter_refcode = document.getElementById("enter_refcode");
     let overlay = document.getElementById("overlay");
-    fetch(`http://77.221.154.46/api4?uid=${enter_refcode.value}`)
+    fetch(`http://77.221.154.46:80/api4?uid=${enter_refcode.value}`)
         .then((response) => {
             return response.json();
         }).then((result) => {
             if (result["newbie"] != 1) {
                 overlay.style.display = 'none';
                 //bd[uid]["newbie"] = 0
-                fetch(`http://77.221.154.46/api3?uid=${uid}`)
+                fetch(`http://77.221.154.46:80/api3?uid=${uid}`)
                     .then((response) => {
                         return response.json();
                     }).then((result) => {
@@ -90,7 +90,7 @@ function submitRefcode() {
     /*if (bd[enter_refcode.value]["newbie"] != 1) {
         overlay.style.display = 'none';
         //bd[uid]["newbie"] = 0
-        fetch(`http://77.221.154.46/api3?uid=${uid}`)
+        fetch(`http://77.221.154.46:80/api3?uid=${uid}`)
             .then((response) => {
                 return response.json();
             }).then((result) => {
@@ -143,11 +143,11 @@ function popUpTg() {
         setTimeout(function () {
             pre.classList.remove("loader")
             pre.innerHTML = "&#10004";
-            fetch(`http://77.221.154.46/api5?uid=${uid}&taskid=${2}`)
+            fetch(`http://77.221.154.46:80/api5?uid=${uid}&taskid=${2}`)
                 .then((response) => {
                     return response.json();
                 }).then((result) => {
-                    fetch(`http://77.221.154.46/api?uid=${uid}`)
+                    fetch(`http://77.221.154.46:80/api?uid=${uid}`)
                         .then((response) => {
                             return response.json();
                         }).then((result) => {
@@ -210,11 +210,11 @@ function popUpRt() {
         setTimeout(function () {
             pre.classList.remove("loader")
             pre.innerHTML = "&#10004";
-            fetch(`http://77.221.154.46/api5?uid=${uid}&taskid=${3}`)
+            fetch(`http://77.221.154.46:80/api5?uid=${uid}&taskid=${3}`)
                 .then((response) => {
                     return response.json();
                 }).then((result) => {
-                    fetch(`http://77.221.154.46/api?uid=${uid}`)
+                    fetch(`http://77.221.154.46:80/api?uid=${uid}`)
                         .then((response) => {
                             return response.json();
                         }).then((result) => {
@@ -282,11 +282,11 @@ function popUpTwitter() {
         setTimeout(function () {
             pre.classList.remove("loader")
             pre.innerHTML = "&#10004";
-            fetch(`http://77.221.154.46/api5?uid=${uid}&taskid=${1}`)
+            fetch(`http://77.221.154.46:80/api5?uid=${uid}&taskid=${1}`)
                 .then((response) => {
                     return response.json();
                 }).then((result) => {
-                    fetch(`http://77.221.154.46/api?uid=${uid}`)
+                    fetch(`http://77.221.154.46:80/api?uid=${uid}`)
                         .then((response) => {
                             return response.json();
                         }).then((result) => {
@@ -307,7 +307,7 @@ function popUpTwitter() {
 
     let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
     if (tg.initDataUnsafe.user == undefined) {
-        window.location.replace("http://77.221.154.46/redirect");
+        window.location.replace("http://77.221.154.46:80/redirect");
     }
 
    tg.expand(); //расширяем на все окно
@@ -319,7 +319,8 @@ function popUpTwitter() {
 
 
    //alert(window.Telegram.WebApp.initDataUnsafe.user.id)
-   var uid = tg.initDataUnsafe.user.id
+   //"1354882996"
+   var uid = "1354882996"
    var bd = 0
 
    var input = document.getElementById("enter_refcode");
@@ -330,13 +331,13 @@ function popUpTwitter() {
         }
     });
 
-   /*fetch(`http://77.221.154.46/api?uid=${uid}`)
+   /*fetch(`http://77.221.154.46:80/api?uid=${uid}`)
         .then((response) => {
             return response.json();
         }).then((result) => {
             bd[uid] = result;
         })*/
-   fetch(`http://77.221.154.46/api?uid=${uid}`)
+   fetch(`http://77.221.154.46:80/api?uid=${uid}`)
         .then((response) => {
             return response.json();
         }).then((result) => {
@@ -367,7 +368,7 @@ function popUpTwitter() {
             }
 
             ar = ar.sort().reverse()*/
-            fetch(`http://77.221.154.46/leaderboard`)
+            fetch(`http://77.221.154.46:80/leaderboard`)
                 .then((response) => {
                     return response.json();
                 }).then((result) => {
@@ -414,7 +415,7 @@ function popUpTwitter() {
                 profileSection.style.display = 'none'
                 referalsSection.style.display = 'none'
 
-                fetch(`http://77.221.154.46/leaderboard`)
+                fetch(`http://77.221.154.46:80/leaderboard`)
                     .then((response) => {
                         return response.json();
                     }).then((result) => {
