@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">!-->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>BlueDuck</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="overlay" id="overlay">
+            <div class="img__box"></div>
+            
+            <span class="text__overlay">
+                $BLU
+            </span>
+
+            <!--<form class="text__overlay form">
+                <fieldset class="text__overlay fieldset">
+                    <input class="input__fieldset" id="enter_refcode" type="text" placeholder="Enter the invite code to get in.">
+                </fieldset>
+
+                <button class="btn__sub" id="sub_refcode" onclick="submitRefcode()" type='submit'>Submit</button>
+            </form>
+
+            <p class="text__overlay black">
+                loloolo
+
+
+            </p>!-->
+
+            <input class="overlay__input" id="enter_refcode" placeholder="Enter the code to get in." type="text">
+
+            <p class="text__overlay black" id="submit_refcode" onclick="submitRefcode();">
+                Press this to get in
+            </p>
+            
+        </div>
+
+         <div class="pop" style="pointer-events: none;">
+            
+        </div>
+        
+        <section class="main__tab tab tab__section active">
+            <header>
+                <div class="container header__container">
+                    <img class="duck1" src="./imgs/duck1.png" width="200" alt="">
+                    <div class="logo"><img src="./imgs/logo.png" width="50" alt="logo"></div>
+                    <div class="points__header"><p id="points__header">Points: 0000</p></div>
+                </div>
+            </header>
+
+            <main>
+                <div class="container main__container">
+                    <img class="duck2" src="./imgs/duck2.png" width="100" alt="">
+                    <img class="duck3" src="./imgs/ducks3.png" width="150" alt="">
+                    <nav>
+                        <ul>
+                            <li><a onclick="popUpTwitter();" href="#">Follow <span class="orange">X</span></a></li>
+                            <li><a onclick="popUpTg();" href="#">Join <span class="orange">TG</span></a></li>
+                            <li><a onclick="popUpRt();" href="#">LIKE,RT <span class="orange">&</span> QUOTE</a></li>
+                            <!--<li><a href="#">S<span class="orange">u</span>b<span class="orange">m</span>i<span
+                                        class="orange">t</span> W<span class="orange">a</span>l<span
+                                        class="orange">l</span>e<span class="orange">t</span>
+                                </a></li>
+                            <li><a href="#"></a></li>!-->
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+
+        </section>
+
+        <section class="leaderboard__tab tab tab__section">
+            <header>
+                <div class="container header__container">
+                    <div class="logo"><img src="./imgs/logo.png" width="50" alt="logo"></div>
+                    <div class="title">Leaderboard</div>
+                </div>
+            </header>
+
+            <main>
+                <section class="leaderboard">
+                    <div class="container leaderboard__container">
+                        <ul id="leaderboard_ul">
+                            <!--<li>
+                                <div class="place">#1000</div>
+                                <div class="marker"></div>
+                                <div class="points">2.000.000 points</div>
+                            </li>
+                            <li>
+                                <div class="place">#1000</div>
+                                <div class="marker"></div>
+                                <div class="points">2.000.000 points</div>
+                            </li>
+                            <li>
+                                <div class="place">#1000</div>
+                                <div class="marker"></div>
+                                <div class="points">2.000.000 points</div>
+                            </li>!-->
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </section>
+
+        <section class="profile__tab tab tab__section">
+            <header>
+                <div class="title header__title">Profile</div>
+            </header>
+            <main>
+                <div class="container main__container">
+                    <form class="form">
+                        <fieldset class="fieldset">
+                            <input class="input__fieldset" id="get_x_name" type="text" placeholder="Enter your x @username">
+                            <input class="input__fieldset" id="get_ton_wallet" type="text" placeholder="Enter your TON wallet">
+                        </fieldset>
+
+                        <button class="btn__sub" id="btn__sub" onclick="submitSmth()" type='submit'>Submit</button>
+                    </form>
+
+                    <p class="black">
+                        If you need any help, you can easily contact our team or get support in chat!
+                    </p>
+
+                    <span class="dark__blue"><a href="#">@BlueDuckTon</a></span>
+                </div>
+            </main>
+        </section>
+
+         <section class="referals__tab tab tab__section">
+            <header>
+                <div class="container header__container">
+                    <div class="logo"><img src="./imgs/logo.png" width="50" alt="logo"></div>
+                    <div class="title">Referrals</div>
+                </div>
+            </header>
+
+            <main>
+                <section class="link">
+                    <div class="container link__container">
+                        <p class="black">⇓ Your invitation link ⇓</p>
+                        <div class="tme">
+                            <span class="link__tme" id="ref_link">t.me/start?bot...</span>
+                            <button class="copy__btn"><img src="./imgs/copy.png" width="30" alt=""></button>
+                        </div>
+                        <p class="description__link">Receive 20% points from each of your referral's earned points!
+                        </p>
+                        <p class="already black" id="invited_data">Already invited: 1111</p>
+                    </div>
+                </section>
+            </main>
+        </section>
+        
+        <section class="menu tab">
+            <div class="container menu__container">
+                <ul>
+                    <li class="tab__ref">
+                        <img src="./imgs/cloud.png" width="50" alt="">
+                        <span>Referrals</span>
+                    </li>
+                    <li class="tab__main">
+                        <img src="./imgs/duck4.png" width="35" height="34" alt="">
+                        <span>Main menu</span>
+                    </li>
+                    <li class="tab__leader">
+                        <img src="./imgs/gnezdo.png" width="50" alt="">
+                        <span>Leaderboard</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./scripts/main.js"></script>
+</body>
+ 
+
+
+
+</html>

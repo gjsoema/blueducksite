@@ -1,0 +1,32 @@
+header {
+    padding-bottom: 100px;
+}
+
+.link {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.link__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.description__link {
+    color: #15638d;
+    font-size: 17px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.copy__btn {
+    background: transparent;
+    transition: .3s;
+}
+
+.copy__btn:active {
+    opacity: 0.5;
+}

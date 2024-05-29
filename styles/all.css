@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Chela+One&family=Gothic+A1&family=Inconsolata:wght@200..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Permanent+Marker&family=Pontano+Sans:wght@300..700&family=Protest+Strike&family=Spicy+Rice&display=swap');
+*{padding: 0;margin: 0;border: 0;
+  font-family: "Permanent Marker", cursive;
+  color: #6bbae5;
+  font-size: 20px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{ 
+  height:100%;width:100%; 
+  font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+a{color:inherit;}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #cde3e2;
+}
+
+.wrapper {
+  flex-grow: 1;
+  overflow-x: hidden;
+  position: relative;
+  max-width: 400px;
+  min-height: 100%;
+  background: url('../imgs/фон.png') no-repeat center/ cover;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.black {
+  color: #000;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.overlay__input {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  border: 8px solid #6bbae5;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  width: 310px;
+}

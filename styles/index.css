@@ -1,0 +1,146 @@
+@import "./all.css";
+@import "./header.css";
+@import "./menu.css";
+@import "./leaderboards.css";
+@import "./profile.css";
+@import "./referals.css";
+@import "./popUp.css";
+@import "./preloader.css";
+
+.overlay {
+    position: absolute;
+    max-width: 400px;
+    inset: 0;
+    background: url('../imgs/фон.png');
+    z-index: 100;
+    cursor: pointer;
+}
+
+.img__box {
+    position: relative;
+    height: 100%;
+    max-width: 400px;
+}
+
+.img__box::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: url('../imgs/overlayDucj.png') no-repeat center/contain;
+    top: 15%;
+    left: -10%;
+}
+
+.img__box::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url('../imgs/overlay.png') no-repeat center/contain;
+    bottom: -0%;
+    right: -3%;
+}
+
+.overlay .text__overlay.black {
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+}
+
+.overlay span {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 6rem;
+    color: #275670;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.duck1 {
+    position: absolute;
+    top: -5px;
+    right: -100px;
+    z-index: 3;
+}
+
+.points__header {
+    margin: 0 auto 0 auto;
+}
+
+.leaderboard__tab {
+    display: none;
+}
+
+.profile__tab {
+    display: none;
+}
+
+.referals__tab {
+    display: none;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.main__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    z-index: 2;
+}
+
+.duck2 {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+}
+
+.duck3 {
+    position: absolute;
+    bottom: -68px;
+    right: -54px;
+    z-index: 3;
+}
+
+.orange {
+    color: #eec470;
+}
+
+.main__container {
+    display: flex;
+}
+
+.main__container ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__container ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #6bbae5;
+    width: 200px;
+    height: 34px;
+    border-radius: 10px;
+    background-color: #e3f2f6;
+}
