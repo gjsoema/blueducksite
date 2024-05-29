@@ -306,9 +306,9 @@ function popUpTwitter() {
 }
 
     let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
-    if (tg.initDataUnsafe.user == undefined) {
-        window.location.replace("http://77.221.154.46:80/redirect");
-    }
+   // if (tg.initDataUnsafe.user == undefined) {
+    //    window.location.replace("http://77.221.154.46:80/redirect");
+   // }
 
    tg.expand(); //расширяем на все окно
 
