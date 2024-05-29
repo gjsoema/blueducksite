@@ -1,67 +1,3 @@
-/*const leaderboardSection = document.querySelector('.leaderboard__tab');
-const mainSection = document.querySelector('.main__tab')
-const profileSection = document.querySelector('.profile__tab');
-const referalsSection = document.querySelector('.referals__tab');
-
-document.querySelector('.btn__sub').addEventListener('click', (e) => {
-    e.preventDefault()
-})
-
-document.querySelector('.tab__ref').addEventListener('click', () => {
-    mainSection.style.display = 'none'
-    leaderboardSection.style.display = 'none'
-    profileSection.style.display = 'none'
-    referalsSection.style.display = 'block'
-})
-
-document.querySelector('.tab__main').addEventListener('click', () => {
-    mainSection.style.display = 'block'
-    leaderboardSection.style.display = 'none'
-    profileSection.style.display = 'none'
-    referalsSection.style.display = 'none'
-})
-
-document.querySelector('.tab__leader').addEventListener('click', () => {
-    mainSection.style.display = 'none'
-    leaderboardSection.style.display = 'block'
-    profileSection.style.display = 'none'
-    referalsSection.style.display = 'none'
-
-    fetch(`https://77.221.154.46:80/leaderboard`)
-        .then((response) => {
-            return response.json();
-        }).then((result) => {
-            let ar = result
-            let i = 0
-            for (const [key, value] of Object.entries(ar)) {
-                lul.innerHTML += `<li>
-                                <div class="place">#${i+1}</div>
-                                <div class="points">${ar[key][0]}</div>
-                                <div class="marker"></div>
-                                <div class="points">${ar[key][1]} points</div>
-                            </li>`
-                i += 1
-            }
-        })
-})
-
-document.querySelectorAll('.logo').forEach(tab => {
-    tab.addEventListener('click', () => {
-        mainSection.style.display = 'none'
-        leaderboardSection.style.display = 'none'
-        profileSection.style.display = 'block'
-        referalsSection.style.display = 'none'
-    })
-})
-
-document.querySelector('.copy__btn').addEventListener("click", function () {
-    navigator.clipboard.writeText(document.querySelector('.link__tme').innerText).then(function () {
-        alert('Text copied to clipboard');
-    }).catch(function (error) {
-        console.error('Error:', error);
-    });
-});*/
-
 function submitSmth() {
     var url = "https://77.221.154.46:80/api2?data=" + encodeURIComponent(JSON.stringify({"name": "set_profile", "uid": "1354882996", "xname": xname_input.value, "tonWallet" : tonWallet_input.value}));
 
@@ -87,16 +23,6 @@ function submitRefcode() {
                     })
             }
         })
-    /*if (bd[enter_refcode.value]["newbie"] != 1) {
-        overlay.style.display = 'none';
-        //bd[uid]["newbie"] = 0
-        fetch(`https://77.221.154.46:80/api3?uid=${uid}`)
-            .then((response) => {
-                return response.json();
-            }).then((result) => {
-                bd = result;
-            })
-    }*/
 }
 
 function popUpTg() {
